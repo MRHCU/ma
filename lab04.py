@@ -1,22 +1,12 @@
 """
-Welcome to Lab 04!
 
-We WILL be grading for Header, Comments, Formatting.
+Author: Mason Hoffman
+Date: 02/05/2026
+Assignment: Lab 04
+Course: CPSC1051
+Lab Section: 002
 
-Follow the instructions in the lab document. <---- very important
-Write your code to complete the tests in the Gradescope autograder.
-You must use ALL of the functions included in the template
-
-Necessary print statements:
-
-"Please select one of the following to convert to meters: cm m km in ft: "
-"Please select one of the following to convert to grams: mg g kg lbs: "
-"Please select one of the following to convert to meters per second: m/s km/h ft/s mph: "
-"Please select one of the following to convert to Celsius: C F K: "
-
-"Please input a value:"
-"Unsupported unit"
-"Invalid unit type"
+Description: This program simulates a program that makes a calculator for conversions
 
 """
 
@@ -28,6 +18,19 @@ def get_property():
         mass/speed/distance/temperature if property is supported, False otherwise
     
     """
+    property = input()
+
+    if property == "mass":
+        return "mass"
+    elif property == "speed":
+        return "speed"
+    elif property == "distance":
+        return "distance"
+    elif property == "temperature":
+        return "temperature"
+    else:
+        return "False"
+        
     pass
     
 
@@ -42,6 +45,22 @@ def get_unit(property):
         String of the specific unit to convert, False if unit is unsupported
         
     """
+
+    if property == "mass":
+        print("Please select one of the following to convert to grams: kilograms, milligrams, or pounds")
+        return 
+    elif property == "speed":
+        print("Please select one of the following to convert to meters per second: km/h, ft/s, or miles/hour")
+        return
+    elif property == "distance":
+        print("Please select one of the following to convert to meters: cm, m, km, in, or ft")
+        return
+    elif property == "temerature":
+        print("Please select one of the following to convert to celcius: f, or k")
+        return
+    else:
+        return "unit is unsupported"
+
     pass
 
 def convert_mass(unit, value):
@@ -63,3 +82,8 @@ if __name__ == "__main__":
     print("Please input a type of unit that you would like to convert. Here are your options: \ndistance \nmass \nspeed \ntemperature\n")
     
     property = get_property() #TODO: Implement get_property() to take in user input and validate it
+
+    get_unit(property)
+
+
+
