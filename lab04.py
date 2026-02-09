@@ -50,7 +50,7 @@ def get_unit(property):
         print("Please select one of the following to convert to grams: g, kg, mg, or lbs")
         return 
     elif property == "speed":
-        print("Please select one of the following to convert to m/s: m, km/h, ft/s, or miles/hour")
+        print("Please select one of the following to convert to m/s: m, km/h, ft/s, or mph")
         return
     elif property == "distance":
         print("Please select one of the following to convert to meters: cm, m, km, inches, or ft")
@@ -75,11 +75,11 @@ def convert_mass(unit, value):
     pass
                     
 def convert_speed(unit, value):
-    if unit == "km/s":
+    if unit == "km/h ":
         return value * 0.277778
     elif unit == "ft/s":
         return value * 0.3048
-    elif unit == "miles/hour":
+    elif unit == "mph":
         return value * 0.44704
     else:
         return value
