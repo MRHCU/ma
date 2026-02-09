@@ -47,16 +47,16 @@ def get_unit(property):
     """
 
     if property == "mass":
-        print("Please select one of the following to convert to grams: kilograms, milligrams, or pounds")
+        print("Please select one of the following to convert to grams: g, kg, mg, or lbs")
         return 
     elif property == "speed":
-        print("Please select one of the following to convert to meters per second: km/h, ft/s, or miles/hour")
+        print("Please select one of the following to convert to m/s: m, km/h, ft/s, or miles/hour")
         return
     elif property == "distance":
         print("Please select one of the following to convert to meters: cm, m, km, inches, or ft")
         return
     elif property == "temerature":
-        print("Please select one of the following to convert to celcius: f, or k")
+        print("Please select one of the following to convert to celcius: C, F, or K")
         return
     else:
         return "unit is unsupported"
@@ -64,14 +64,14 @@ def get_unit(property):
     pass
 
 def convert_mass(unit, value):
-    if unit == "kilograms":
+    if unit == "kg":
         return value * 1000
-    elif unit == "milligrams":
+    elif unit == "mg":
         return value / 1000
-    elif unit == "pounds":
+    elif unit == "lbs":
         return value * 453.592
     else:
-        return "unsupported unit"
+        return value
     pass
                     
 def convert_speed(unit, value):
@@ -82,7 +82,7 @@ def convert_speed(unit, value):
     elif unit == "miles/hour":
         return value * 0.44704
     else:
-        return "unsupported unit"
+        return value
     pass
     
 def convert_distance(unit, value):
@@ -95,16 +95,16 @@ def convert_distance(unit, value):
     elif unit == "ft":
         return value * 0.3048
     else:
-        return "unsupported unit"
+        return value
     pass
     
 def convert_temperature(unit, value):
-    if unit == "f":
+    if unit == "F":
         return (value - 32) * (5 / 9)
-    elif unit == "k":
+    elif unit == "K":
         return value - 273.15
     else:
-        return "unsupported unit"
+        return value
     pass
 
 if __name__ == "__main__":
