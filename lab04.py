@@ -53,7 +53,7 @@ def get_unit(property):
         print("Please select one of the following to convert to meters per second: km/h, ft/s, or miles/hour")
         return
     elif property == "distance":
-        print("Please select one of the following to convert to meters: cm, m, km, in, or ft")
+        print("Please select one of the following to convert to meters: cm, m, km, inches, or ft")
         return
     elif property == "temerature":
         print("Please select one of the following to convert to celcius: f, or k")
@@ -64,15 +64,47 @@ def get_unit(property):
     pass
 
 def convert_mass(unit, value):
+    if unit == "kilograms":
+        return value * 1000
+    elif unit == "milligrams":
+        return value / 1000
+    elif unit == "pounds":
+        return value * 453.592
+    else:
+        return "unsupported unit"
     pass
                     
 def convert_speed(unit, value):
+    if unit == "km/s":
+        return value * 0.277778
+    elif unit == "ft/s":
+        return value * 0.3048
+    elif unit == "miles/hour":
+        return value * 0.44704
+    else:
+        return "unsupported unit"
     pass
     
 def convert_distance(unit, value):
+    if unit == "cm":
+        return value / 100
+    elif unit == "km":
+        return value * 1000
+    elif unit == "inches":
+        return value * 0.0254
+    elif unit == "ft":
+        return value * 0.3048
+    else:
+        return "unsupported unit"
     pass
     
 def convert_temperature(unit, value):
+    if unit == "f":
+        return (value - 32) * (5 / 9)
+    elif unit == "k":
+        return value - 273.15
+    else:
+        return "unsupported unit"
     pass
 
 if __name__ == "__main__":
@@ -84,6 +116,24 @@ if __name__ == "__main__":
     property = get_property() #TODO: Implement get_property() to take in user input and validate it
 
     get_unit(property)
+
+    unit = input()
+
+    value = float(input("Please input a value "))
+
+    if property == "mass":
+        result = convert_mass(unit, value)
+    elif property == "speed":
+        result = convert_speed(unit, value)
+    elif property == "distance":
+        result = convert_distance(unit, value)
+    elif property == "temperature":
+        result = convert_temperature(unit, value)
+    else:
+        result = "false"
+    
+    print(f"{value:.0f} {property} in {unit}: {result}")
+
 
 
 
