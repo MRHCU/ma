@@ -47,16 +47,16 @@ def get_unit(property):
     """
 
     if property == "mass":
-        print("Please select one of the following to convert to grams: g, kg, mg, lbs")
+        print("Please select one of the following to convert to grams: g kg mg lbs")
         return 
     elif property == "speed":
-        print("Please select one of the following to convert to m/s: m, km/h, ft/s, mph")
+        print("Please select one of the following to convert to m/s: m km/h ft/s mph")
         return
     elif property == "distance":
-        print("Please select one of the following to convert to meters: cm, m, km, in, ft")
+        print("Please select one of the following to convert to meters: cm m km in ft")
         return
     elif property == "temperature":
-        print("Please select one of the following to convert to celcius: C, F, K")
+        print("Please select one of the following to convert to celcius: C F K")
         return
     else:
         return "unit is unsupported"
