@@ -55,7 +55,7 @@ def get_unit(property):
     elif property == "distance":
         print("Please select one of the following to convert to meters: cm, m, km, in, or ft")
         return
-    elif property == "temerature":
+    elif property == "temperature":
         print("Please select one of the following to convert to celcius: C, F, or K")
         return
     else:
