@@ -53,7 +53,7 @@ def get_unit(property):
         print("Please select one of the following to convert to m/s: m, km/h, ft/s, or mph")
         return
     elif property == "distance":
-        print("Please select one of the following to convert to meters: cm, m, km, inches, or ft")
+        print("Please select one of the following to convert to meters: cm, m, km, in, or ft")
         return
     elif property == "temerature":
         print("Please select one of the following to convert to celcius: C, F, or K")
@@ -75,7 +75,7 @@ def convert_mass(unit, value):
     pass
                     
 def convert_speed(unit, value):
-    if unit == "km/h ":
+    if unit == "km/h":
         return value * 0.277778
     elif unit == "ft/s":
         return value * 0.3048
@@ -90,7 +90,7 @@ def convert_distance(unit, value):
         return value / 100
     elif unit == "km":
         return value * 1000
-    elif unit == "inches":
+    elif unit == "in":
         return value * 0.0254
     elif unit == "ft":
         return value * 0.3048
