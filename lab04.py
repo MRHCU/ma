@@ -119,7 +119,8 @@ if __name__ == "__main__":
 
     unit = input()
 
-    value = float(input("Please input a value "))
+    print("Please input a value ")
+    value = float(input)
 
     if property == "mass":
         result = convert_mass(unit, value)
@@ -130,7 +131,7 @@ if __name__ == "__main__":
     elif property == "temperature":
         result = convert_temperature(unit, value)
     else:
-        result = "false"
+        result = "Unsupported unit"
     
     print(f"{value:.0f} {property} in {unit}: {result}")
 
