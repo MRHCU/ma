@@ -120,7 +120,7 @@ if __name__ == "__main__":
     unit = input()
 
     print("Please input a value:")
-    value = float(input)
+    value = float(input())
 
     if property == "mass":
         result = convert_mass(unit, value)
