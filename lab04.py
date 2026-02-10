@@ -81,6 +81,8 @@ def convert_speed(unit, value):
         return value * 0.3048
     elif unit == "mph":
         return value * 0.44704
+    elif unit < 0:
+        return "You can't have a negative mass!"
     else:
         return value
     pass
