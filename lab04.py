@@ -119,7 +119,7 @@ if __name__ == "__main__":
 
     unit = input()
 
-    print("Please input a value ")
+    print("Please input a value:")
     value = float(input)
 
     if property == "mass":
